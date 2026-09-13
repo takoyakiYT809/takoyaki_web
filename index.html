@@ -901,15 +901,23 @@
     .wrap{width:calc(100% - 24px);}
     .videos{grid-template-columns:1fr;}
     .shorts-grid{grid-template-columns:repeat(2,1fr);}
-    h1{
-      font-size:40px;
-      letter-spacing:-.06em;
-    }
-    h1 span{
-      white-space:normal;
-      font-size:.84em;
-      line-height:1.12;
-    }
+  h1{
+    font-size:34px;          /* ← 全体のサイズを統一 */
+    line-height:1.15;
+    letter-spacing:-.04em;
+  }
+
+  h1 span{
+    display:block;
+    white-space:normal;       /* ← 行ごとに勝手に縮小されるのを防ぐ */
+    font-size:1em;            /* ← 子要素のサイズを親と完全統一 */
+    line-height:1.15;
+  }
+
+  h1 span span{
+    font-size:1em;            /* ← さらに入れ子のサイズも統一 */
+    line-height:1.15;
+  }
     .hero-actions{
       display:grid;
       grid-template-columns:1fr;
