@@ -844,11 +844,28 @@
     .links{display:none;}
     .hero{padding:72px 0 62px;}
     .hero .orb{right:-150px;top:40px;}
-    .hero-icon{
-      width:76px;
-      height:76px;
-      border-radius:23px;
-    }
+.hero-icon{
+  width:140px;        /* ← ここで確実に大きくする */
+  height:140px;
+  border-radius:32px;
+  object-fit:cover;
+
+  /* ネオン枠強化 */
+  border:3px solid rgba(89,239,255,1);
+  box-shadow:
+    0 0 40px rgba(89,239,255,.9),
+    0 0 80px rgba(89,239,255,.6);
+
+  /* 位置ズレ修正 */
+  display:block;
+  margin-bottom:28px;
+
+  /* 浮遊アニメーション */
+  animation:iconFloat 5s ease-in-out infinite;
+
+  /* 光の反射 */
+  background:radial-gradient(circle at 20% 0%,rgba(255,255,255,.45),transparent 60%);
+}
     .lead{font-size:16px;}
     .section{padding:60px 0;}
     .about-grid{grid-template-columns:1fr;}
